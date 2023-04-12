@@ -1,0 +1,41 @@
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-white);
+  padding-top: 3rem;
+
+  button {
+    border: none;
+    width: 100%;
+    color: var(--primary-black);
+    background-color: var(--primary-white);
+    height: 3rem;
+    padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid var(--primary-red);
+  }
+
+  button:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.first {
+  animation-delay: 1s;
+}
+.second {
+  animation-delay: 0.9s;
+}
+.third {
+  animation-delay: 0.8s;
+}
+.forth {
+  animation-delay: 0.7s;
+}
+.fifth {
+  animation-delay: 0.6s;
+}
+.sixth {
+  animation-delay: 0.5s;
+}

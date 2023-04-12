@@ -1,0 +1,39 @@
+.siteFooter {
+  grid-area: footer;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--primary-white);
+  // border-left: 2px solid var(--primary-red);
+  padding: 0;
+  padding-top: 80vh;
+  box-shadow: none;
+  animation-name: grow;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
+  button {
+    border: none;
+    width: 100%;
+    color: var(--primary-black);
+    background-color: var(--primary-white);
+    height: 3rem;
+    padding: 0 1rem 0 1rem;
+    // border-top: 1px solid var(--primary-red);
+  }
+
+  // button:last-of-type {
+  //   border-bottom: none;
+  // }
+}
+
+@keyframes grow {
+  from {
+    box-shadow: -2px -2000px 15px 1px var(--primary-red);
+  }
+  to {
+    box-shadow: -2px -20px 15px 1px var(--primary-red);
+  }
+}
