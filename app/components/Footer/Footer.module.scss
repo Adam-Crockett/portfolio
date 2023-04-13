@@ -31,9 +31,9 @@
 
 @keyframes grow {
   from {
-    box-shadow: -2px -2000px 15px 1px var(--primary-red);
+    box-shadow: 0px -2000px 8px 1px var(--primary-red);
   }
   to {
-    box-shadow: -2px -20px 15px 1px var(--primary-red);
+    box-shadow: 0px -20px 8px 1px var(--primary-red);
   }
 }
