@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 :root {
   /* --primary-red: #c70606; */
-  --primary-red: #aa0808;
   /* --primary-red: #940909; */
   /* --primary-red: #6e0606; */
+  --primary-red: #aa0808;
   --secondary-red: #5c0505;
   --primary-white: #f8f8f8;
   --primary-black: #272222;
@@ -136,5 +136,13 @@ button {
 
   .footerWrapper {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all animations */
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
