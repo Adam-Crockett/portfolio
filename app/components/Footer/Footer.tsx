@@ -2,7 +2,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.siteFooter}>
-      <button></button>
+      <button>Theme</button>
     </footer>
   );
 };
