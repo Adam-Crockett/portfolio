@@ -2,6 +2,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import './globals.css';
 import 'animate.css';
+// import 'hover.css';
 
 export const metadata = {
   title: 'Adam Crockett',
@@ -20,7 +21,9 @@ export default function RootLayout({
           <Navbar />
         </header>
         <main>{children}</main>
-        <Footer />
+        <div className='footerWrapper'>
+          <Footer />
+        </div>
       </body>
     </html>
   );
