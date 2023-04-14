@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={styles.mainContent}>
       <div
-        className={`${styles.nameContainer} animate__animated animate__fadeInDown`}
+        className={`${styles.nameContainer} animate__animated animate__fadeInDown ${styles.containerDelay}`}
       >
         <h1
           className={`animate__animated animate__fadeInRight ${styles.first}`}
