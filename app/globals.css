@@ -61,7 +61,7 @@ header {
   z-index: 1;
 
   box-shadow: none;
-  animation-name: grow;
+  animation-name: headerGrow;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
@@ -86,21 +86,21 @@ main {
   animation-fill-mode: forwards;
   align-self: flex-start;
 }
-@keyframes grow {
+@keyframes headerGrow {
   from {
-    box-shadow: 0px 2000px 8px 1px var(--primary-black);
+    box-shadow: 0px 2000px 5px 1px var(--secondary-red);
   }
   to {
-    box-shadow: 0px 20px 8px 1px var(--primary-black);
+    box-shadow: 0px 20px 5px 1px var(--secondary-red);
   }
 }
 
 @keyframes footerGrow {
   from {
-    box-shadow: 0px -2000px 8px 1px var(--primary-black);
+    box-shadow: 0px -2000px 5px 1px var(--secondary-red);
   }
   to {
-    box-shadow: 0px -20px 8px 1px var(--primary-black);
+    box-shadow: 0px -20px 5px 1px var(--secondary-red);
   }
 }
 
@@ -115,6 +115,7 @@ button {
   font-weight: 500;
 }
 
+/* mobile & tablet styling */
 @media (max-width: 768px), (max-height: 480px) {
   body {
     grid-template-columns: 1fr;
@@ -139,8 +140,16 @@ button {
   }
 }
 
+/* start implementation of the dark mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff; 
+    --background-color: #333; 
+  }
+} */
+
+/* Disable all animations */
 @media (prefers-reduced-motion: reduce) {
-  /* Disable all animations */
   * {
     animation: none !important;
     transition: none !important;

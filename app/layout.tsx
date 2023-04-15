@@ -2,7 +2,6 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import './globals.css';
 import 'animate.css';
-// import 'hover.css';
 
 export const metadata = {
   title: 'Adam Crockett',
