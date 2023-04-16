@@ -32,6 +32,8 @@
 
   font-family: 'Comfortaa', Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif;
+
+  color-scheme: light dark;
 }
 
 *,
@@ -60,7 +62,7 @@ body {
   transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.dark {
+.dark-theme {
   --background-color: var(--primary-black);
   --text-color: var(--primary-white);
   --text-color-invert: var(--primary-black);
@@ -71,7 +73,7 @@ body {
   --glow-color: var(--primary-white);
   --content-fill-color: var(--primary-grey);
 }
-.light {
+.light-theme {
   --background-color: var(--primary-white);
   --text-color: var(--primary-black);
   --text-color-invert: var(--primary-offwhite);
@@ -180,7 +182,43 @@ button {
 
 /* dark mode default -- Finish implementation*/
 @media (prefers-color-scheme: dark) {
-  :root {
+  body {
+    --background-color: var(--primary-black);
+    --text-color: var(--primary-white);
+    --text-color-invert: var(--primary-black);
+    --text-color-major: var(--primary-red);
+    --heighlight-color: var(--primary-red);
+    --border-color: var(--primary-grey);
+    --border-color-invert: var(--primary-red);
+    --glow-color: var(--primary-white);
+    --content-fill-color: var(--primary-grey);
+  }
+
+  body.light-theme {
+    --background-color: var(--primary-white);
+    --text-color: var(--primary-black);
+    --text-color-invert: var(--primary-offwhite);
+    --text-color-major: var(--primary-red);
+    --heighlight-color: var(--primary-red);
+    --border-color: var(--primary-grey);
+    --border-color-invert: var(--primary-red);
+    --glow-color: var(--primary-black);
+    --content-fill-color: var(--primary-grey);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    --background-color: var(--primary-white);
+    --text-color: var(--primary-black);
+    --text-color-invert: var(--primary-offwhite);
+    --text-color-major: var(--primary-red);
+    --heighlight-color: var(--primary-red);
+    --border-color: var(--primary-grey);
+    --border-color-invert: var(--primary-red);
+    --glow-color: var(--primary-black);
+    --content-fill-color: var(--primary-grey);
+  }
+  body.dark-theme {
     --background-color: var(--primary-black);
     --text-color: var(--primary-white);
     --text-color-invert: var(--primary-black);

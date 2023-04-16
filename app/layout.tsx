@@ -6,6 +6,7 @@ import 'animate.css';
 export const metadata = {
   title: 'Adam Crockett',
   description: 'Adam Crockett - Software Engineer',
+  colorScheme: 'light dark',
 };
 
 export default function RootLayout({

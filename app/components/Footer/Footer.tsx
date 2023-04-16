@@ -5,15 +5,16 @@ import styles from './Footer.module.scss';
 import darkMode from '../../../public/dark_mode.png';
 const Footer = () => {
   const [isBrowser, setIsBrowser] = useState(false);
-  const themeToggle = useRef<HTMLElement | undefined>(document.body);
+  const themeToggle = useRef<HTMLElement | undefined>();
   const toggleTheme = () => {
     if (themeToggle.current) {
-      if (themeToggle.current.classList.contains('dark')) {
-        themeToggle.current.classList.remove('dark');
-        themeToggle.current.classList.add('light');
+      const prefersDarkScheme = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      );
+      if (prefersDarkScheme.matches) {
+        themeToggle.current.classList.toggle('light-theme');
       } else {
-        themeToggle.current.classList.remove('light');
-        themeToggle.current.classList.add('dark');
+        themeToggle.current.classList.toggle('dark-theme');
       }
     }
   };
