@@ -1,16 +1,21 @@
+'use client';
+import { useRef } from 'react';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import darkMode from '../../../public/dark_mode.png';
 const Footer = () => {
-  // const toggleTheme = document.getElementById('toggle-theme-btn');
-  // // const body = document.body;
+  const themeToggle = useRef(document.body);
+  const toggleTheme = () => {
+    themeToggle.current.classList.toggle('dark');
+  };
 
-  // toggleTheme.addEventListener('click', () => {
-  //   console.log('clicked');
-  // });
   return (
     <footer className={styles.siteFooter}>
-      <button className={styles.hvrSweepToLeft} id='toggle-theme-btn'>
+      <button
+        className={styles.hvrSweepToLeft}
+        id='toggle-theme-btn'
+        onClick={toggleTheme}
+      >
         <Image
           className={`${styles.darkModeToggle}`}
           title='Dark mode toggle'
