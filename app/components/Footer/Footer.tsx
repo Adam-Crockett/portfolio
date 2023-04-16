@@ -7,7 +7,15 @@ const Footer = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const themeToggle = useRef<HTMLElement | undefined>(document.body);
   const toggleTheme = () => {
-    if (themeToggle.current) themeToggle.current.classList.toggle('dark');
+    if (themeToggle.current) {
+      if (themeToggle.current.classList.contains('dark')) {
+        themeToggle.current.classList.remove('dark');
+        themeToggle.current.classList.add('light');
+      } else {
+        themeToggle.current.classList.remove('light');
+        themeToggle.current.classList.add('dark');
+      }
+    }
   };
 
   useEffect(() => {

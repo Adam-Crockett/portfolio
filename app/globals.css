@@ -40,7 +40,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  transition: color 0.5s ease, background-color 0.5s ease;
+  transition: color 0.3s ease, background-color 0.5s ease;
 }
 
 html {
@@ -69,6 +69,17 @@ body {
   --border-color: var(--primary-grey);
   --border-color-invert: var(--primary-red);
   --glow-color: var(--primary-white);
+  --content-fill-color: var(--primary-grey);
+}
+.light {
+  --background-color: var(--primary-white);
+  --text-color: var(--primary-black);
+  --text-color-invert: var(--primary-offwhite);
+  --text-color-major: var(--primary-red);
+  --heighlight-color: var(--primary-red);
+  --border-color: var(--primary-grey);
+  --border-color-invert: var(--primary-red);
+  --glow-color: var(--primary-black);
   --content-fill-color: var(--primary-grey);
 }
 
@@ -167,7 +178,7 @@ button {
   }
 }
 
-/* start implementation of the dark mode */
+/* dark mode default -- Finish implementation*/
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--primary-black);

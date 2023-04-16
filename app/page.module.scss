@@ -18,7 +18,7 @@
   overflow: hidden;
   min-width: 10rem;
   color: var(--text-color);
-  transition: color 0.5s ease, background-color 0.5s ease;
+  transition: color 0.3s ease, background-color 0.5s ease;
   h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -38,7 +38,7 @@
   max-width: 30rem;
   background-color: var(--background-color);
   overflow: hidden;
-  transition: color 0.5s ease, background-color 0.5s ease;
+  transition: color 0.3s ease, background-color 0.5s ease;
 }
 
 .containerDelay {
