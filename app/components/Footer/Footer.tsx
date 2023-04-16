@@ -1,15 +1,21 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import darkMode from '../../../public/dark_mode.png';
 const Footer = () => {
-  const themeToggle = useRef(document.body);
+  const [isBrowser, setIsBrowser] = useState(false);
+  const themeToggle = useRef<HTMLElement | undefined>(document.body);
   const toggleTheme = () => {
-    themeToggle.current.classList.toggle('dark');
+    if (themeToggle.current) themeToggle.current.classList.toggle('dark');
   };
 
-  return (
+  useEffect(() => {
+    setIsBrowser(typeof window !== 'undefined');
+    themeToggle.current = document.body;
+  }, []);
+
+  return isBrowser ? (
     <footer className={styles.siteFooter}>
       <button
         className={styles.hvrSweepToLeft}
@@ -28,7 +34,7 @@ const Footer = () => {
         />
       </button>
     </footer>
-  );
+  ) : null;
 };
 
 export default Footer;
