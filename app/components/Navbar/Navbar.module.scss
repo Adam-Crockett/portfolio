@@ -1,6 +1,7 @@
 .navbar {
   padding-top: 3rem;
   overflow: hidden;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 .hamburgerMenu {
@@ -11,32 +12,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-white);
+  background-color: var(--background-color);
   padding-top: 1rem;
   padding-bottom: 1rem;
+  transition: color 0.5s ease, background-color 0.5s ease;
 
   a {
     cursor: pointer;
     border: none;
     width: 100%;
-    color: var(--primary-black);
-    background-color: var(--primary-white);
+    color: var(--text-color);
+    background-color: var(--background-color);
     height: 3rem;
     padding: 0 1rem 0 1rem;
-    border-top: 1px solid var(--primary-black);
+    border-top: 1px solid var(--border-color);
     text-decoration: none;
     text-align: center;
     line-height: 3rem;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.5s ease, background-color 0.5s ease;
   }
 
   a:hover {
-    color: var(--primary-white);
-    border-top: 1px solid var(--primary-red);
+    color: var(--background-color);
+    border-top: 1px solid var(--border-color-invert);
   }
 
   a:hover + a {
-    border-top: 1px solid var(--primary-red);
+    border-top: 1px solid var(--border-color-invert);
   }
   a:first-of-type,
   a:first-of-type:hover {
@@ -88,7 +90,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--primary-red);
+  background: var(--heighlight-color);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -119,8 +121,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--primary-white);
+    background-color: var(--background-color);
     animation: none;
+    transition: color 0.5s ease, background-color 0.5s ease;
   }
   .buttonWrapper {
     overflow: hidden;
@@ -133,8 +136,10 @@
     width: 100vw;
     height: 100vh;
     justify-content: flex-start;
+    transition: color 0.5s ease, background-color 0.5s ease;
     a {
       animation: none;
+      transition: color 0.5s ease, background-color 0.5s ease;
     }
   }
 
@@ -160,7 +165,7 @@
       content: '';
       width: var(--bar-width);
       height: var(--bar-height);
-      background-color: var(--primary-grey);
+      background-color: var(--content-fill-color);
       border-radius: 9999px;
       transform-origin: left center;
       transition: opacity var(--bar-animation-timing),
@@ -195,8 +200,8 @@
     &:has(input:focus-visible)::before,
     &:has(input:focus-visible)::after,
     input:focus-visible {
-      border: 1px solid var(--primary-white);
-      box-shadow: 0 0 0 1px var(--primary-black);
+      border: 1px solid var(--background-color);
+      box-shadow: 0 0 0 1px var(--text-color);
     }
   }
 

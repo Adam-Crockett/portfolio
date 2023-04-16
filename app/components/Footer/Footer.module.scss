@@ -4,12 +4,13 @@
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 3rem;
+  transition: color 0.5s ease, background-color 0.5s ease;
 
   button {
     border: none;
     width: 100%;
-    color: var(--primary-black);
-    background-color: var(--primary-white);
+    color: var(--text-color);
+    background-color: var(--background-color);
     height: 3rem;
     padding: 0 1rem 0 1rem;
 
@@ -49,7 +50,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--secondary-red);
+  background: var(--heighlight-color);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -64,7 +65,7 @@
 .hvrSweepToLeft:hover,
 .hvrSweepToLeft:focus,
 .hvrSweepToLeft:active {
-  color: var(--primary-white);
+  color: var(--background-color);
 }
 .hvrSweepToLeft:hover:before,
 .hvrSweepToLeft:focus:before,
@@ -74,4 +75,11 @@
 }
 
 @media (max-width: 768px), (max-height: 480px) {
+  .siteFooter {
+    width: 100vw;
+    padding: 0.5rem 1rem;
+    button {
+      width: 100%;
+    }
+  }
 }

@@ -12,6 +12,16 @@
   --primary-porcelain: #dddcdb;
   --secondary-porcelain: #dbd4cd;
 
+  --background-color: var(--primary-white);
+  --text-color: var(--primary-black);
+  --text-color-invert: var(--primary-offwhite);
+  --text-color-major: var(--primary-red);
+  --heighlight-color: var(--primary-red);
+  --border-color: var(--primary-grey);
+  --border-color-invert: var(--primary-red);
+  --glow-color: var(--primary-black);
+  --content-fill-color: var(--primary-grey);
+
   --bar-width: 40px;
   --bar-height: 4px;
   --bar-gap: 6px;
@@ -30,6 +40,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 html {
@@ -45,7 +56,20 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-white);
+  background-color: var(--background-color);
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.dark {
+  --background-color: var(--primary-black);
+  --text-color: var(--primary-white);
+  --text-color-invert: var(--primary-black);
+  --text-color-major: var(--primary-red);
+  --heighlight-color: var(--primary-red);
+  --border-color: var(--primary-grey);
+  --border-color-invert: var(--primary-red);
+  --glow-color: var(--primary-red);
+  --content-fill-color: var(--primary-grey);
 }
 
 header {
@@ -57,8 +81,9 @@ header {
   padding: 0 0rem 55vh 0rem;
   width: 100%;
   margin: 0;
-  background-color: var(--primary-white);
+  background-color: var(--background-color);
   z-index: 1;
+  transition: color 0.5s ease, background-color 0.5s ease;
 
   box-shadow: none;
   animation-name: headerGrow;
@@ -73,11 +98,12 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 .footerWrapper {
   grid-area: footer;
-  background-color: var(--primary-white);
+  background-color: var(--background-color);
   padding: 0;
   padding-top: 80vh;
   box-shadow: none;
@@ -85,22 +111,23 @@ main {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   align-self: flex-start;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
 @keyframes headerGrow {
   from {
-    box-shadow: 0px 2000px 5px 1px var(--secondary-red);
+    box-shadow: 0px 2000px 5px 1px var(--glow-color);
   }
   to {
-    box-shadow: 0px 20px 5px 1px var(--secondary-red);
+    box-shadow: 0px 20px 5px 1px var(--glow-color);
   }
 }
 
 @keyframes footerGrow {
   from {
-    box-shadow: 0px -2000px 5px 1px var(--secondary-red);
+    box-shadow: 0px -2000px 5px 1px var(--glow-color);
   }
   to {
-    box-shadow: 0px -20px 5px 1px var(--secondary-red);
+    box-shadow: 0px -20px 5px 1px var(--glow-color);
   }
 }
 
@@ -129,7 +156,7 @@ button {
     padding: 0;
     width: 100%;
     margin: 0;
-    background-color: var(--primary-white);
+    background-color: var(--background-color);
     z-index: 1;
     box-shadow: none;
     animation: none;
