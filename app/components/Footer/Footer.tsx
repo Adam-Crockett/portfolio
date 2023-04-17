@@ -16,10 +16,20 @@ const Footer = () => {
       } else {
         themeToggle.current.classList.toggle('dark-theme');
       }
+      let theme = document.body.classList.contains('light-theme')
+        ? 'light'
+        : 'dark';
+      localStorage.setItem('theme', theme);
     }
   };
 
   useEffect(() => {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      document.body.classList.toggle('dark-theme');
+    } else if (currentTheme === 'light') {
+      document.body.classList.toggle('light-theme');
+    }
     setIsBrowser(typeof window !== 'undefined');
     themeToggle.current = document.body;
   }, []);
@@ -30,12 +40,13 @@ const Footer = () => {
         className={styles.hvrSweepToLeft}
         id='toggle-theme-btn'
         onClick={toggleTheme}
+        title='Dark mode toggle'
       >
         <Image
           className={`${styles.darkModeToggle}`}
           title='Dark mode toggle'
           src={darkMode}
-          alt='Dark mode toggle'
+          alt='Dark mode toggle, moon icon'
           width={35}
           height={35}
           style={{ color: 'red' }}
