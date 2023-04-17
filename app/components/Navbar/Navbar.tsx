@@ -1,5 +1,6 @@
 import Footer from '../Footer/Footer';
 import styles from './Navbar.module.scss';
+import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
@@ -10,11 +11,13 @@ export default function Navbar() {
       </label>
 
       <ul className={styles.buttonWrapper}>
-        <a
+        <Link
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.first}`}
+          href='/'
+          title='Home Page'
         >
           Home
-        </a>
+        </Link>
         <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.second}`}
         >
@@ -25,11 +28,13 @@ export default function Navbar() {
         >
           Work
         </a>
-        <a
+        <Link
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
+          href='/skills'
+          title='Skills Page'
         >
           Skills
-        </a>
+        </Link>
         <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
         >
