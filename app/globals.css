@@ -68,9 +68,9 @@ body {
   --text-color-invert: var(--primary-black);
   --text-color-major: var(--primary-red);
   --heighlight-color: var(--primary-red);
-  --border-color: var(--primary-grey);
+  --border-color: var(--primary-red);
   --border-color-invert: var(--primary-red);
-  --glow-color: var(--primary-white);
+  --glow-color: var(--primary-red);
   --content-fill-color: var(--primary-grey);
 }
 .light-theme {
@@ -188,9 +188,9 @@ button {
     --text-color-invert: var(--primary-black);
     --text-color-major: var(--primary-red);
     --heighlight-color: var(--primary-red);
-    --border-color: var(--primary-grey);
+    --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
-    --glow-color: var(--primary-white);
+    --glow-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
 
@@ -224,9 +224,9 @@ button {
     --text-color-invert: var(--primary-black);
     --text-color-major: var(--primary-red);
     --heighlight-color: var(--primary-red);
-    --border-color: var(--primary-grey);
+    --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
-    --glow-color: var(--primary-white);
+    --glow-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
 }
