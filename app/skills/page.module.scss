@@ -1,0 +1,96 @@
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 15rem 2rem 15rem 2rem;
+  ul {
+    list-style-type: none;
+  }
+  h2 {
+    font-size: 2rem;
+    color: var(--text-color-major);
+  }
+  li {
+    font-size: large;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.divider {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 1rem;
+
+  width: 100%;
+  margin-bottom: -10rem;
+}
+
+.dividerDelay {
+  animation-delay: 0.5s;
+}
+
+.sectionContainer {
+  text-align: center;
+  overflow: hidden;
+  div {
+    margin-bottom: 2rem;
+    overflow-y: hidden;
+  }
+  ul {
+    overflow-y: hidden;
+    li {
+      overflow-y: hidden;
+    }
+  }
+}
+
+.sectionTitleWrapper {
+  padding: 1rem;
+  box-shadow: 0px -3px 6px 2px var(--glow-color);
+}
+
+.sectionOne {
+  align-self: flex-start;
+}
+.sectionTwo {
+}
+.sectionThree {
+  align-self: flex-end;
+}
+
+.titleDelay {
+  animation-delay: 1s;
+}
+
+.first {
+  animation-delay: 1.2s;
+}
+.second {
+  animation-delay: 1.4s;
+}
+.third {
+  animation-delay: 1.6s;
+}
+.forth {
+  animation-delay: 1.8s;
+}
+.fifth {
+  animation-delay: 1.9s;
+}
+.sixth {
+  animation-delay: 2s;
+}
+
+@media (max-width: 768px), (max-height: 480px) {
+  .mainContent {
+    padding: 3rem 1rem 0rem 1rem;
+  }
+}
