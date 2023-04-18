@@ -15,7 +15,7 @@ const Navbar = () => {
       <label
         className={`${styles.hamburgerMenu} animate__animated animate__fadeInDown`}
       >
-        <input type='checkbox' checked={menuOpen} onClick={handleClick} />
+        <input type='checkbox' checked={menuOpen} onChange={handleClick} />
       </label>
 
       <ul className={styles.buttonWrapper}>
