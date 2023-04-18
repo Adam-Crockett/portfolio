@@ -1,13 +1,21 @@
+'use client';
+import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
-export default function Navbar() {
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleClick() {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
     <nav className={styles.navbar}>
       <label
         className={`${styles.hamburgerMenu} animate__animated animate__fadeInDown`}
       >
-        <input type='checkbox' />
+        <input type='checkbox' checked={menuOpen} onClick={handleClick} />
       </label>
 
       <ul className={styles.buttonWrapper}>
@@ -15,6 +23,7 @@ export default function Navbar() {
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.first}`}
           href='/'
           title='Home Page'
+          onClick={handleClick}
         >
           Home
         </Link>
@@ -32,6 +41,7 @@ export default function Navbar() {
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
           href='/skills'
           title='Skills Page'
+          onClick={handleClick}
         >
           Skills
         </Link>
@@ -51,4 +61,6 @@ export default function Navbar() {
       </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;

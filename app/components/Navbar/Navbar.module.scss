@@ -130,13 +130,14 @@
     top: 3rem;
     position: absolute;
     right: 100%;
-    transition: right 0.5s ease-in-out;
     padding: 0.5rem 1rem;
     padding-top: calc(var(--hamgurger-height) + var(--bar-margin) + 1rem);
     width: 100vw;
     height: 100vh;
     justify-content: flex-start;
-    transition: color 0.5s ease, background-color 0.5s ease;
+    transition: right 0.5s ease-in-out;
+    transition: all 0.5s ease;
+
     a {
       animation: none;
       transition: color 0.5s ease, background-color 0.5s ease;
