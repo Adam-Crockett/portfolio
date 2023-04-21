@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Jost');
 :root {
   /* --primary-red: #c70606; */
   /* --primary-red: #940909; */
@@ -20,6 +20,7 @@
   --border-color: var(--primary-grey);
   --border-color-invert: var(--primary-red);
   --glow-color: var(--primary-black);
+  --line-trace-color: var(--primary-grey);
   --content-fill-color: var(--primary-grey);
 
   --bar-width: 40px;
@@ -30,7 +31,7 @@
   --hamburger-height: calc(var(--bar-height) * 3 + var(--bar-gap) * 2);
   --square-root-2: 1.41421356237;
 
-  font-family: 'Comfortaa', Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana,
+  font-family: 'Nunito', Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif;
 
   color-scheme: light dark;
@@ -87,6 +88,8 @@ body {
 
 header {
   grid-area: header;
+  overflow: hidden;
+  position: relative;
   align-self: flex-end;
   display: flex;
   align-items: center;
@@ -94,7 +97,6 @@ header {
   padding: 0 0rem 55vh 0rem;
   width: 100%;
   margin: 0;
-  background-color: var(--background-color);
   z-index: 1;
   transition: color 0.5s ease, background-color 0.5s ease;
 
@@ -114,12 +116,205 @@ main {
   transition: color 0.5s ease, background-color 0.5s ease;
 }
 
+.verticalLine {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--background-color) 0%,
+      var(--line-trace-color) 75%,
+      var(--line-trace-color) 100%
+    );
+    animation-name: toBottom;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+
+  &:nth-child(1) {
+    margin-left: -25%;
+    &::after {
+      animation-delay: 2s;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-left: 25%;
+    &::after {
+      animation-delay: 2.5s;
+    }
+  }
+}
+
+.horizontalLine {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  right: 0;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 5vw;
+    top: 0;
+    left: -50%;
+    background: linear-gradient(
+      to right,
+      var(--background-color) 0%,
+
+      var(--line-trace-color) 50%,
+
+      var(--line-trace-color) 100%
+    );
+    // animation: toRight 5s 1s infinite;
+    animation-name: toRight;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16, 0.85, 0.45, 1);
+  }
+
+  &:nth-child(1) {
+    margin-top: -25%;
+    &::after {
+      animation-delay: 2s;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-top: 25%;
+    &::after {
+      animation-delay: 2.5s;
+    }
+  }
+}
+
+.moveLineDown {
+  &::after {
+    animation-name: toBottom;
+    animation-iteration-count: infinite;
+  }
+}
+
+.moveLineUp {
+  &::after {
+    animation-name: toTop;
+    animation-iteration-count: infinite;
+    background: linear-gradient(
+      to top,
+      var(--background-color) 0%,
+      var(--line-trace-color) 75%,
+      var(--line-trace-color) 100%
+    );
+  }
+}
+.moveLineRight {
+  &::after {
+    animation-name: toRight;
+    animation-iteration-count: infinite;
+  }
+}
+.moveLineLeft {
+  &::after {
+    animation-name: toLeft;
+    animation-iteration-count: infinite;
+  }
+}
+
+// .moveLineUpAndDown {
+//   &::after {
+//     animation-name: toTop, toBottom;
+//     animation-iteration-count: infinite;
+//     animation-direction: alternate;
+//     background: linear-gradient(
+//       to bottom,
+//       var(--background-color) 0%,
+//       var(--line-trace-color) 75%,
+//       var(--line-trace-color) 100%
+//     );
+//     background: linear-gradient(
+//       to top,
+//       var(--background-color) 0%,
+//       var(--line-trace-color) 75%,
+//       var(--line-trace-color) 100%
+//     );
+//   }
+// }
+
+.lineNav {
+  top: 2%;
+  right: 0%;
+  &::after {
+    animation-duration: 7s;
+    animation-delay: 0.5s;
+  }
+}
+
+.lineFoot {
+  top: 0%;
+  left: 0%;
+  height: 98%;
+  &::after {
+    animation-name: toTop;
+    animation-duration: 7s;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes toBottom {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+@keyframes toTop {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -50%;
+  }
+}
+@keyframes toRight {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes toLeft {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+
 .footerWrapper {
   grid-area: footer;
-  background-color: var(--background-color);
+  position: relative;
   padding: 0;
   padding-top: 80vh;
   box-shadow: none;
+  overflow: hidden;
   animation-name: footerGrow;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
@@ -163,6 +358,7 @@ button {
     grid-template-areas: 'header' 'main';
   }
   header {
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,6 +369,10 @@ button {
     z-index: 1;
     box-shadow: none;
     animation: none;
+  }
+
+  .line {
+    display: none;
   }
 
   .footerWrapper {
@@ -191,6 +391,7 @@ button {
     --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-red);
+    --line-trace-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
 
@@ -203,6 +404,7 @@ button {
     --border-color: var(--primary-grey);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-black);
+    --line-trace-color: var(--primary-grey);
     --content-fill-color: var(--primary-grey);
   }
 }
@@ -216,6 +418,7 @@ button {
     --border-color: var(--primary-grey);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-black);
+    --line-trace-color: var(--primary-grey);
     --content-fill-color: var(--primary-grey);
   }
   body.dark-theme {
@@ -227,6 +430,7 @@ button {
     --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-red);
+    --line-trace-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
 }
