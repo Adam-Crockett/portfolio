@@ -32,13 +32,13 @@ const Navbar = () => {
         >
           Projects
         </a>
-        <a
+        {/* <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.third}`}
         >
           Work
-        </a>
+        </a> */}
         <Link
-          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
+          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.third}`}
           href='/skills'
           title='Skills Page'
           onClick={handleClick}
@@ -46,12 +46,12 @@ const Navbar = () => {
           Skills
         </Link>
         <a
-          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
+          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
         >
           Contact
         </a>
         <a
-          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.sixth}`}
+          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
         >
           Resume
         </a>
