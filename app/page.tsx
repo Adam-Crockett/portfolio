@@ -1,5 +1,4 @@
 import styles from './page.module.scss';
-
 export default function Home() {
   return (
     <div className={styles.mainContent}>
@@ -19,6 +18,7 @@ export default function Home() {
         <p className={`animate__animated animate__fadeInRight ${styles.third}`}>
           Software Engineer
         </p>
+        <div className={`verticalLine moveLineUp ${styles.homePageLine}`} />
       </div>
       <div className={`${styles.infoContainer} `}>
         <p className={`animate__animated animate__fadeInLeft ${styles.forth}`}>
