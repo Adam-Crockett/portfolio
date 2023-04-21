@@ -53,6 +53,8 @@
 }
 
 .sectionTitleWrapper {
+  overflow-x: hidden;
+  position: relative;
   padding: 1rem;
   box-shadow: 0px -3px 6px 2px var(--glow-color);
 }
@@ -89,8 +91,34 @@
   animation-delay: 2s;
 }
 
+.titleLine {
+  bottom: -44%;
+}
+
+.firstTitleLine {
+  &::after {
+    animation-duration: 4s;
+    animation-delay: 0s;
+  }
+}
+.secondTitleLine {
+  &::after {
+    animation-duration: 4s;
+    animation-delay: 1s;
+  }
+}
+.thirdTitleLine {
+  &::after {
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+  }
+}
+
 @media (max-width: 768px), (max-height: 480px) {
   .mainContent {
-    padding: 3rem 1rem 0rem 1rem;
+    padding: 3rem 2rem 0rem 2rem;
+  }
+  .titleLine {
+    display: none;
   }
 }

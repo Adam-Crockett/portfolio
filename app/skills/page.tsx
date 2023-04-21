@@ -2,9 +2,6 @@ import styles from './page.module.scss';
 export default function Skills() {
   return (
     <div className={styles.mainContent}>
-      {/* <div
-        className={`${styles.divider} animate__animated animate__fadeIn ${styles.dividerDelay}`}
-      > */}
       <section className={`${styles.sectionOne} ${styles.sectionContainer}`}>
         <div
           className={`${styles.sectionTitleWrapper} animate__animated animate__fadeInDown ${styles.dividerDelay}`}
@@ -14,6 +11,9 @@ export default function Skills() {
           >
             Languages
           </h2>
+          <div
+            className={`horizontalLine ${styles.titleLine} ${styles.firstTitleLine}`}
+          />
         </div>
         <div>
           <ul>
@@ -49,6 +49,9 @@ export default function Skills() {
           >
             JS Stack
           </h2>
+          <div
+            className={`horizontalLine ${styles.titleLine} ${styles.secondTitleLine}`}
+          />
         </div>
         <div>
           <ul>
@@ -94,6 +97,9 @@ export default function Skills() {
           >
             Databases
           </h2>
+          <div
+            className={`horizontalLine ${styles.titleLine} ${styles.thirdTitleLine}`}
+          />
         </div>
         <div>
           <ul>
@@ -110,7 +116,6 @@ export default function Skills() {
           </ul>
         </div>
       </section>
-      {/* </div> */}
     </div>
   );
 }
