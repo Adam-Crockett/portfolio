@@ -16,10 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='gradientBackground'>
+      <body>
         <header>
           <Navbar />
-          <div className='verticalLine lineNav' />
+          <div className='verticalLine  lineNav' />
         </header>
         <main>{children}</main>
         <div className='footerWrapper'>

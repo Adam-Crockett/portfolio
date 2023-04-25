@@ -257,7 +257,7 @@ main {
 
 .lineNav {
   top: 2%;
-  right: 0%;
+  right: -1%;
   &::after {
     animation-duration: 7s;
     animation-delay: 0.5s;
@@ -266,10 +266,9 @@ main {
 
 .lineFoot {
   top: 0%;
-  left: 0%;
+  left: -1%;
   height: 98%;
   &::after {
-    animation-name: toTop;
     animation-duration: 7s;
     animation-delay: 1s;
   }
