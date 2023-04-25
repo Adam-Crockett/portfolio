@@ -1,0 +1,24 @@
+.mainContent {
+  display: grid;
+  grid-template-areas:
+    'sectionOne .'
+    '. sectionTwo';
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 15rem 2rem 15rem 2rem;
+
+  h2 {
+    font-size: 2rem;
+    color: var(--text-color-major);
+  }
+}
+.sectionOne {
+  grid-area: sectionOne;
+  border-right: 1px solid var(--border-color);
+}
+.sectionTwo {
+  grid-area: sectionTwo;
+  border-left: 1px solid var(--border-color);
+}
