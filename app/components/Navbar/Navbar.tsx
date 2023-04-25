@@ -27,16 +27,14 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <a
+        <Link
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.second}`}
+          href='/projects'
+          title='Projects Page'
+          onClick={handleClick}
         >
           Projects
-        </a>
-        {/* <a
-          className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.third}`}
-        >
-          Work
-        </a> */}
+        </Link>
         <Link
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.third}`}
           href='/skills'
