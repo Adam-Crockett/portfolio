@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <header>
           <Navbar />
-          <div className='verticalLine  lineNav' />
+          <div className='verticalLine lineNav' />
         </header>
         <main>{children}</main>
         <div className='footerWrapper'>
