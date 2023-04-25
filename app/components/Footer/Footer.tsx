@@ -1,8 +1,10 @@
 'use client';
 import { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
 import styles from './Footer.module.scss';
-import darkMode from '../../../public/dark_mode.png';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Link from 'next/link';
 const Footer = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const themeToggle = useRef<HTMLElement | undefined>();
@@ -36,22 +38,31 @@ const Footer = () => {
 
   return isBrowser ? (
     <footer className={styles.siteFooter}>
+      <Link
+        href='https://github.com/Adam-Crockett'
+        target='_blank'
+        rel='noopener noreferrer'
+        className={styles.hvrSweepToLeft}
+        title='Github link'
+      >
+        <GitHubIcon className={`${styles.darkModeToggle}`} />
+      </Link>
+      <Link
+        href='https://www.linkedin.com/in/adam-crockett/'
+        target='_blank'
+        rel='noopener noreferrer'
+        className={styles.hvrSweepToLeft}
+        title='LinkedIn link'
+      >
+        <LinkedInIcon className={`${styles.darkModeToggle}`} />
+      </Link>
       <button
         className={styles.hvrSweepToLeft}
         id='toggle-theme-btn'
         onClick={toggleTheme}
         title='Dark mode toggle'
       >
-        <Image
-          className={`${styles.darkModeToggle}`}
-          title='Dark mode toggle'
-          src={darkMode}
-          alt='Dark mode toggle, moon icon'
-          width={35}
-          height={35}
-          style={{ color: 'red' }}
-          priority
-        />
+        <DarkModeIcon className={`${styles.darkModeToggle}`} />
       </button>
     </footer>
   ) : null;

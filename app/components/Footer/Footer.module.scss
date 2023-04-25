@@ -1,12 +1,15 @@
 .siteFooter {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 3rem;
   transition: color 0.5s ease, background-color 0.5s ease;
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     width: 100%;
     color: var(--text-color);
@@ -16,16 +19,33 @@
     transition: color 0.5s ease, background-color 0.5s ease;
 
     .darkModeToggle {
-      filter: invert(11%) sepia(31%) saturate(5792%) hue-rotate(345deg)
-        brightness(94%) contrast(110%);
-      transition: filter 0s;
+      color: var(--text-color);
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    height: 3rem;
+    padding: 0 1rem 0 1rem;
+    transition: color 0.5s ease, background-color 0.5s ease;
+
+    .darkModeToggle {
+      color: var(--text-color);
     }
   }
 
   button:hover {
     .darkModeToggle {
-      filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg)
-        brightness(100%) contrast(100%);
+      color: var(--background-color);
+    }
+  }
+  a:hover {
+    .darkModeToggle {
+      color: var(--background-color);
     }
   }
 }
