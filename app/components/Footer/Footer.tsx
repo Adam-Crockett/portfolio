@@ -8,8 +8,7 @@ import Link from 'next/link';
 const Footer = () => {
   const [isBrowser, setIsBrowser] = useState(false);
   const themeToggle = useRef<HTMLElement | undefined>();
-  const toggleTheme = (e) => {
-    e.preventDefault();
+  const toggleTheme = () => {
     if (themeToggle.current) {
       const prefersDarkScheme = window.matchMedia(
         '(prefers-color-scheme: dark)'
