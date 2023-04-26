@@ -84,12 +84,10 @@
   transition-timing-function: ease-out;
 }
 .hvrSweepToLeft:hover,
-.hvrSweepToLeft:focus,
 .hvrSweepToLeft:active {
   color: var(--background-color);
 }
 .hvrSweepToLeft:hover:before,
-.hvrSweepToLeft:focus:before,
 .hvrSweepToLeft:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
