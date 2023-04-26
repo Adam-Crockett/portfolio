@@ -181,7 +181,6 @@ main {
 
       var(--line-trace-color) 100%
     );
-    // animation: toRight 5s 1s infinite;
     animation-name: toRight;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
@@ -234,26 +233,6 @@ main {
     animation-iteration-count: infinite;
   }
 }
-
-// .moveLineUpAndDown {
-//   &::after {
-//     animation-name: toTop, toBottom;
-//     animation-iteration-count: infinite;
-//     animation-direction: alternate;
-//     background: linear-gradient(
-//       to bottom,
-//       var(--background-color) 0%,
-//       var(--line-trace-color) 75%,
-//       var(--line-trace-color) 100%
-//     );
-//     background: linear-gradient(
-//       to top,
-//       var(--background-color) 0%,
-//       var(--line-trace-color) 75%,
-//       var(--line-trace-color) 100%
-//     );
-//   }
-// }
 
 .lineNav {
   top: 2%;
@@ -311,7 +290,7 @@ main {
   grid-area: footer;
   position: relative;
   padding: 0;
-  padding-top: 80vh;
+  padding-top: 70vh;
   box-shadow: none;
   overflow: hidden;
   animation-name: footerGrow;
