@@ -121,4 +121,26 @@
   .titleLine {
     display: none;
   }
+  .titleDelay {
+    animation-delay: 0.5s;
+  }
+
+  .first {
+    animation-delay: 0.7s;
+  }
+  .second {
+    animation-delay: 0.9s;
+  }
+  .third {
+    animation-delay: 1.1s;
+  }
+  .forth {
+    animation-delay: 1.3s;
+  }
+  .fifth {
+    animation-delay: 1.4s;
+  }
+  .sixth {
+    animation-delay: 1.5s;
+  }
 }
