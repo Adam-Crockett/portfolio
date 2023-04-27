@@ -17,10 +17,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <header>
-          <Navbar />
-          <div className='verticalLine lineNav' />
-        </header>
+        <div className='headerWrapper'>
+          <header>
+            <Navbar />
+            <div className='verticalLine lineNav' />
+          </header>
+        </div>
         <main>{children}</main>
         <div className='footerWrapper'>
           <Footer />
