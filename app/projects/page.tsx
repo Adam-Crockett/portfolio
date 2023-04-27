@@ -15,7 +15,6 @@ const Projects = () => {
           <Link className={styles.projectImageWrapper} href='#'>
             <Image
               className={styles.projectImage}
-              width={500}
               src={powerLevelPNG}
               alt='test'
             />
@@ -34,19 +33,24 @@ const Projects = () => {
               className={styles.cardLinks}
               title='Github link'
             >
-              <GitHubIcon
-                fontSize='small'
-                className={`${styles.darkModeToggle}`}
-              />
+              <GitHubIcon className={`${styles.darkModeToggle}`} />
             </Link>
           </div>
         </div>
+        <div
+          className={`verticalLine moveLineDown ${styles.cardLineOnRight}`}
+        />
       </section>
       <section className={`${styles.sectionTwo} ${styles.sectionContainer}`}>
+        <div className={`verticalLine moveLineDown ${styles.cardLineOnLeft}`} />
         <div className={`${styles.projectCard} ${styles.rightSideCard}`}>
           <h2 className={styles.cardTitle}>Memories Application</h2>
           <Link className={styles.projectImageWrapper} href='#'>
-            <Image width={500} src={memoriesPNG} alt='test' />
+            <Image
+              className={styles.projectImage}
+              src={memoriesPNG}
+              alt='test'
+            />
           </Link>
           <div className={styles.textContent}>
             <p className={styles.projectDescription}>
@@ -62,10 +66,7 @@ const Projects = () => {
               className={styles.cardLinks}
               title='Github link'
             >
-              <GitHubIcon
-                fontSize='small'
-                className={`${styles.darkModeToggle}`}
-              />
+              <GitHubIcon className={`${styles.darkModeToggle}`} />
             </Link>
           </div>
         </div>
