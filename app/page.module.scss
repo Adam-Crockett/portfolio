@@ -36,8 +36,8 @@
 .homePageLine {
   height: 98%;
   top: 1%;
-  width: 1px;
-  right: 0%;
+  width: 4px;
+  right: -1%;
   &::after {
     animation-duration: 10s;
     animation-delay: 1.5s;
@@ -113,7 +113,7 @@
       margin-bottom: 1rem;
     }
   }
-  .lineName {
+  .homePageLine {
     display: none;
   }
   @keyframes drop {
