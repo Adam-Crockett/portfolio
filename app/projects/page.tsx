@@ -38,11 +38,13 @@ const Projects = () => {
           </div>
         </div>
         <div
-          className={`verticalLine moveLineDown ${styles.cardLineOnRight}`}
+          className={`verticalLine moveLineDown ${styles.cardLineOnRight} ${styles.firstCardLineOnRight}`}
         />
       </section>
       <section className={`${styles.sectionTwo} ${styles.sectionContainer}`}>
-        <div className={`verticalLine moveLineDown ${styles.cardLineOnLeft}`} />
+        <div
+          className={`verticalLine moveLineUp ${styles.cardLineOnLeft} ${styles.firstCardLineOnLeft}`}
+        />
         <div className={`${styles.projectCard} ${styles.rightSideCard}`}>
           <h2 className={styles.cardTitle}>Memories Application</h2>
           <Link className={styles.projectImageWrapper} href='#'>
