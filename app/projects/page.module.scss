@@ -6,11 +6,11 @@
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  width: 100%;
-  padding: 10rem 2rem 10rem 2rem;
+  width: 90vw;
+  padding: 10rem 1rem 10rem 3rem;
+  column-gap: 5rem;
 
   h2 {
-    // font-size: 1rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
   }
@@ -44,11 +44,6 @@
 
 .projectCard {
   display: grid;
-  grid-template-areas:
-    'title .'
-    'image description'
-    'image description'
-    'links links';
   height: 100%;
   background-color: var(--secondary-background-color);
 
@@ -74,12 +69,15 @@
     border-radius: 5px;
     margin-bottom: 0.5rem;
     padding: 1rem;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .projectImage {
-      width: 500px;
+      width: 100%;
+      max-width: 500px;
+      min-width: 200px;
       height: auto;
       border-radius: 5px;
     }
@@ -150,7 +148,6 @@
   }
   .sectionContainer {
     padding: 0rem;
-    // position: auto;
     width: 100%;
     margin-bottom: 1rem;
     box-shadow: none;
@@ -161,9 +158,6 @@
       'image image'
       'description description'
       'links links';
-  }
-  .projectImage {
-    width: 300px;
   }
   .cardLineOnLeft {
     display: none;
