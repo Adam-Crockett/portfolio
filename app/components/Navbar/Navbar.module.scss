@@ -101,12 +101,10 @@
   transition-timing-function: ease-out;
 }
 .hvrSweepToRight:hover,
-.hvrSweepToRight:focus,
 .hvrSweepToRight:active {
   color: white;
 }
 .hvrSweepToRight:hover:before,
-.hvrSweepToRight:focus:before,
 .hvrSweepToRight:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
