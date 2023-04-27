@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
+// import Resume from '@/public/resume.pdf';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -47,7 +48,7 @@ const Navbar = () => {
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
           href='mailto:adamkcrockett@gmail.com'
           rel='noopener noreferrer'
-          title='Contact Page'
+          title='email link'
           onClick={handleClick}
           target='_blank'
         >
@@ -55,6 +56,12 @@ const Navbar = () => {
         </Link>
         <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
+          // href={Resume}
+          rel='noopener noreferrer'
+          title='Resume'
+          onClick={handleClick}
+          target='_blank'
+          download
         >
           Resume
         </a>
