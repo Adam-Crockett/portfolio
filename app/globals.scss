@@ -12,6 +12,8 @@
   --primary-grey: #a29797;
   --primary-porcelain: #dddcdb;
   --secondary-porcelain: #dbd4cd;
+  --dark-mode-shadow-color: #201b1b;
+  --light-mode-shadow-color: #b3aeae;
 
   --background-color: var(--primary-white);
   --secondary-background-color: var(--primary-porcelain);
@@ -22,6 +24,7 @@
   --border-color: var(--primary-grey);
   --border-color-invert: var(--primary-red);
   --glow-color: var(--primary-black);
+  --shadow-color: var(--light-mode-shadow-color);
   --line-trace-color: var(--primary-grey);
   --content-fill-color: var(--primary-grey);
 
@@ -83,6 +86,7 @@ body {
   --border-color: var(--primary-red);
   --border-color-invert: var(--primary-red);
   --glow-color: var(--primary-red);
+  --shadow-color: var(--dark-mode-shadow-color);
   --content-fill-color: var(--primary-grey);
 }
 .light-theme {
@@ -95,6 +99,7 @@ body {
   --border-color: var(--primary-grey);
   --border-color-invert: var(--primary-red);
   --glow-color: var(--primary-black);
+  --shadow-color: var(--light-mode-shadow-color);
   --content-fill-color: var(--primary-grey);
 }
 
@@ -397,6 +402,7 @@ button {
     --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-red);
+    --shadow-color: var(--dark-mode-shadow-color);
     --line-trace-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
@@ -411,6 +417,7 @@ button {
     --border-color: var(--primary-grey);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-black);
+    --shadow-color: var(--light-mode-shadow-color);
     --line-trace-color: var(--primary-grey);
     --content-fill-color: var(--primary-grey);
   }
@@ -426,6 +433,7 @@ button {
     --border-color: var(--primary-grey);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-black);
+    --shadow-color: var(--light-mode-shadow-color);
     --line-trace-color: var(--primary-grey);
     --content-fill-color: var(--primary-grey);
   }
@@ -439,6 +447,7 @@ button {
     --border-color: var(--primary-red);
     --border-color-invert: var(--primary-red);
     --glow-color: var(--primary-red);
+    --shadow-color: var(--dark-mode-shadow-color);
     --line-trace-color: var(--primary-red);
     --content-fill-color: var(--primary-grey);
   }
