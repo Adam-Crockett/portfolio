@@ -43,11 +43,16 @@ const Navbar = () => {
         >
           Skills
         </Link>
-        <a
+        <Link
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.forth}`}
+          href='mailto:adamkcrockett@gmail.com'
+          rel='noopener noreferrer'
+          title='Contact Page'
+          onClick={handleClick}
+          target='_blank'
         >
           Contact
-        </a>
+        </Link>
         <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
         >
