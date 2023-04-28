@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Footer from '../Footer/Footer';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
-// import Resume from '@/public/resume.pdf';
+import Resume from '/public/resume.pdf';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -56,12 +56,12 @@ const Navbar = () => {
         </Link>
         <a
           className={`animate__animated animate__slideInLeft ${styles.hvrSweepToRight} ${styles.fifth}`}
-          // href={Resume}
+          href={Resume}
           rel='noopener noreferrer'
           title='Resume'
           onClick={handleClick}
           target='_blank'
-          download
+          // download
         >
           Resume
         </a>
