@@ -61,7 +61,6 @@ const Navbar = () => {
           title='Resume'
           onClick={handleClick}
           target='_blank'
-          // download
         >
           Resume
         </a>
