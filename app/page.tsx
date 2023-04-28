@@ -22,8 +22,13 @@ export default function Home() {
       </div>
       <div className={`${styles.infoContainer} `}>
         <p className={`animate__animated animate__fadeInLeft ${styles.forth}`}>
-          An effective and team focused engineer, experienced in bridging
-          cross-functional teams and bringing success to projects.
+          I am an experienced developer in building and deploying full-stack
+          solutions.
+        </p>
+        <br />
+        <p className={`animate__animated animate__fadeInLeft ${styles.forth}`}>
+          I have a passion for exploring the latest tools and technologies to
+          create exceptional products and user experiences.
         </p>
       </div>
     </div>
