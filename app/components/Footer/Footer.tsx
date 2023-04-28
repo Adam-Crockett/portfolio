@@ -42,7 +42,7 @@ const Footer = () => {
         href='https://github.com/Adam-Crockett'
         target='_blank'
         rel='noopener noreferrer'
-        className={styles.hvrSweepToLeft}
+        className={`animate__animated animate__slideInRight ${styles.hvrSweepToLeft} ${styles.first}`}
         title='Github link'
       >
         <GitHubIcon className={`${styles.darkModeToggle}`} />
@@ -51,13 +51,13 @@ const Footer = () => {
         href='https://www.linkedin.com/in/adam-crockett/'
         target='_blank'
         rel='noopener noreferrer'
-        className={styles.hvrSweepToLeft}
+        className={`animate__animated animate__slideInRight ${styles.hvrSweepToLeft} ${styles.second}`}
         title='LinkedIn link'
       >
         <LinkedInIcon className={`${styles.darkModeToggle}`} />
       </Link>
       <button
-        className={styles.hvrSweepToLeft}
+        className={`animate__animated animate__slideInRight ${styles.hvrSweepToLeft} ${styles.third}`}
         id='toggle-theme-btn'
         onClick={toggleTheme}
         title='Dark mode toggle'
