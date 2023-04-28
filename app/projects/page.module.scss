@@ -9,6 +9,7 @@
   width: 90vw;
   padding: 10rem 1rem 10rem 3rem;
   column-gap: 2vw;
+  overflow: hidden;
 
   h2 {
     color: var(--text-color);
@@ -19,6 +20,7 @@
 .sectionContainer {
   padding: 0.6rem 0rem 0.6rem 0rem;
   position: relative;
+  overflow: hidden;
 
   .cardLineOnLeft {
     height: 94%;
@@ -134,11 +136,22 @@
   box-shadow: 12px 0px 3px -11px var(--glow-color);
   border-radius: 5px;
   grid-area: sectionOne;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 .sectionTwo {
   box-shadow: -12px 0px 3px -11px var(--glow-color);
   grid-area: sectionTwo;
   margin-top: -15rem;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+
+.cardOne {
+  animation-delay: 1s;
+}
+.cardTwo {
+  animation-delay: 1.5s;
 }
 
 .firstCardLineOnRight {
@@ -175,7 +188,7 @@
     padding: 0rem;
     width: 100%;
     margin-bottom: 1rem;
-    box-shadow: none;
+    box-shadow: 0px 11px 10px -11px var(--glow-color);
   }
   .projectCard {
     grid-template-areas:
@@ -194,6 +207,7 @@
     .cardLinks {
       justify-self: center;
     }
+    animation-delay: 0s;
   }
   .cardLineOnLeft {
     display: none;

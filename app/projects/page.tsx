@@ -9,8 +9,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const Projects = () => {
   return (
     <div className={styles.mainContent}>
-      <section className={`${styles.sectionOne} ${styles.sectionContainer}`}>
-        <div className={`${styles.projectCard} ${styles.leftSideCard}`}>
+      <section
+        className={`animate__animated animate__rotateInUpRight ${styles.sectionOne} ${styles.sectionContainer}`}
+      >
+        <div
+          className={`animate__animated animate__slideInRight ${styles.cardOne} ${styles.projectCard} ${styles.leftSideCard}`}
+        >
           <h2 className={styles.cardTitle}>Power Level: EDH Tool</h2>
           <Link className={styles.projectImageWrapper} href='#'>
             <Image
@@ -41,11 +45,15 @@ const Projects = () => {
           className={`verticalLine moveLineDown ${styles.cardLineOnRight} ${styles.firstCardLineOnRight}`}
         />
       </section>
-      <section className={`${styles.sectionTwo} ${styles.sectionContainer}`}>
+      <section
+        className={`animate__animated animate__rotateInUpLeft ${styles.sectionTwo} ${styles.sectionContainer}`}
+      >
         <div
           className={`verticalLine moveLineUp ${styles.cardLineOnLeft} ${styles.firstCardLineOnLeft}`}
         />
-        <div className={`${styles.projectCard} ${styles.rightSideCard}`}>
+        <div
+          className={`animate__animated animate__slideInLeft ${styles.cardTwo} ${styles.projectCard} ${styles.rightSideCard}`}
+        >
           <h2 className={styles.cardTitle}>Memories Application</h2>
           <Link className={styles.projectImageWrapper} href='#'>
             <Image
