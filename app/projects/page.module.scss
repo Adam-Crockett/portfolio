@@ -30,17 +30,17 @@
     z-index: 1;
     &::after {
       animation-duration: 5s;
-      animation-delay: 1.5s;
+      animation-delay: 0.5s;
     }
   }
   .cardLineOnRight {
     height: 95%;
     top: 2%;
-    width: 9px;
-    right: -1%;
+    width: 1px;
+    right: 0%;
     &::after {
       animation-duration: 5s;
-      animation-delay: 1.5s;
+      animation-delay: 0.5s;
     }
   }
 }
@@ -162,14 +162,14 @@
   border-radius: 5px;
   grid-area: sectionOne;
   animation-delay: 0s;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 .sectionTwo {
   box-shadow: -12px 0px 3px -11px var(--glow-color);
   grid-area: sectionTwo;
   margin-top: -15rem;
   animation-delay: 0.5s;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 .cardOne {
